@@ -4,6 +4,7 @@ export const QUERY_RESOLVERS = {
     __resolveType: (obj: any) => {
       if (obj.compliment) return 'Compliment';
       if (obj.insult) return 'Insult';
+      if (obj.object) return 'ComplexObject';
     },
   },
 };

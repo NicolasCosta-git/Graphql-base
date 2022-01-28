@@ -1,1 +1,1 @@
-union Message = Compliment | Insult
+union Message = Compliment | Insult | ComplexObject

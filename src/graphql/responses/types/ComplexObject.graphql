@@ -1,0 +1,3 @@
+type ComplexObject {
+  object: [NameObject!]!
+}
