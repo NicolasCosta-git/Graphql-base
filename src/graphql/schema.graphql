@@ -1,3 +1,4 @@
 type Query {
   getMessage(params: GetMessageInput!): GetMessageResponse
+  getCompliment(params: GetComplimentInput!): Message
 }

@@ -1,0 +1,4 @@
+input GetComplimentInput {
+  name: String!
+  age: Int!
+}
