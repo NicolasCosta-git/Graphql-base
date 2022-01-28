@@ -1,0 +1,13 @@
+overwrite: true
+schema: "src/graphql/**/*.graphql"
+documents: null
+generates:
+  src/generated/graphql.ts:
+    plugins:
+      - "typescript"
+    config:
+      skipTypename: true
+      typesPrefix: Gql
+      declarationKind: 'interface'
+      namingConvention:
+        enumValues: keep
