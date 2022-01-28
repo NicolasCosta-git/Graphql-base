@@ -8,6 +8,7 @@ import { mergeTypeDefs } from '@graphql-tools/merge';
 import { loadFilesSync } from '@graphql-tools/load-files';
 import { graphqlHTTP } from 'express-graphql';
 import { print } from 'graphql';
+import morgan from 'morgan';
 import express from 'express';
 import path from 'path';
 
@@ -18,7 +19,7 @@ const schema = makeExecutableSchema({
   resolvers: { ...QUERY_RESOLVERS, ...MUTATION_RESOLVERS },
 });
 export const app = express();
-
+app.use(morgan('dev'));
 app.use(
   '/graphql',
   graphqlHTTP({
